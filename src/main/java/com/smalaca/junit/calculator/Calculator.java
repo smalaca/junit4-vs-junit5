@@ -6,7 +6,7 @@ public class Calculator {
     }
 
     public long subtraction(long minuend, long subtrahend) {
-        return minuend + subtrahend;
+        return minuend - subtrahend;
     }
 
     public long multiplication(long firstFactor, long secondFactor) {
