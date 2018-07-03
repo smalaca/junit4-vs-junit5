@@ -14,8 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(Parameterized.class)
 public class CalculatorDivisionTest {
-    private static final long ANY_NUMBER = 13;
-
     private final Calculator calculator = new Calculator();
 
     @Parameter public long divident;
@@ -37,10 +35,5 @@ public class CalculatorDivisionTest {
         long result = calculator.division(divident, divider);
 
         assertThat(result).isEqualTo(expected);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowExceptionInCaseOfZero() {
-        calculator.division(ANY_NUMBER, 0);
     }
 }
